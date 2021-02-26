@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1>Location App</h1>
       {location.loaded
-        ? JSON.stringify(location)
+        ? JSON.stringify(location.coordinates)
         : "Location data is not yet available"}
     </div>
   );
