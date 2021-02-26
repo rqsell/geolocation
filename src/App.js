@@ -8,7 +8,6 @@ function App() {
   const GetDistance = () => {
     let lat1 = 48.8566;
     let lon1 = 2.3522;
-
     let lat2 = location.coordinates.latitude;
     //
     let lon2 = location.coordinates.longitude;
@@ -32,8 +31,12 @@ function App() {
     <div className="App">
       <h1>Location App</h1>
       {location.loaded
-        ? JSON.stringify(location.coordinates)
+        ? JSON.stringify(
+            location.coordinates.longitude,
+            location.coordinates.longitude
+          )
         : "Location data is not yet available"}
+
       {GetDistance()}
     </div>
   );
