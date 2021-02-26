@@ -8,9 +8,8 @@ function App() {
   const GetDistance = () => {
     let lat1 = 48.8566;
     let lon1 = 2.3522;
-    let lat2 = location.coordinates.latitude;
-    //
-    let lon2 = location.coordinates.longitude;
+    let lat2 = Number(location.coordinates.lat);
+    let lon2 = Number(location.coordinates.lng);
     // location.coordinates.longitude;
     const R = 6371e3; // metres
     const φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians
@@ -31,10 +30,7 @@ function App() {
     <div className="App">
       <h1>Location App</h1>
       {location.loaded
-        ? JSON.stringify(
-            location.coordinates.longitude,
-            location.coordinates.longitude
-          )
+        ? JSON.stringify(location.coordinates)
         : "Location data is not yet available"}
 
       {GetDistance()}
