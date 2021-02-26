@@ -8,8 +8,11 @@ function App() {
   const GetDistance = () => {
     let lat1 = 48.8566;
     let lon1 = 2.3522;
+
     let lat2 = location.coordinates.latitude;
+    //
     let lon2 = location.coordinates.longitude;
+    // location.coordinates.longitude;
     const R = 6371e3; // metres
     const φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians
     const φ2 = (lat2 * Math.PI) / 180;
@@ -22,6 +25,7 @@ function App() {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
     const d = R * c; // in metres
+    console.log(lat2);
     return <div> The distance in meters from paris france is {d}</div>;
   };
   return (
