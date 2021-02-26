@@ -20,4 +20,4 @@ function getDistance(props) {
   return <div> The distance in meters from paris france is {d}</div>;
 }
 
-export default GetDistance;
+export default getDistance;
